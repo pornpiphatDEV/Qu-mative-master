@@ -33,6 +33,7 @@ function createQuestionLabelAndInput(q_inp_value) {
     var select = document.createElement("select");
     select.name = `qt_${q_number}`;
     select.id = `qt_${q_number}`;
+    
 
     for (const val of values) {
         var option = document.createElement("option");

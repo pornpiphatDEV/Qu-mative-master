@@ -21,9 +21,7 @@
         <div class="question">
 
 
-            <label for="q_{{forloop.counter}}">{{forloop.counter}}.</label>
-            <input type="text" name="q_{{forloop.counter}}" id="q_{{forloop.counter}}" class="quiz-form__question"
-                required value='{{question.question}}'>
+
 
 
             <!-- var select = document.createElement("select");
@@ -37,52 +35,82 @@
                     select.appendChild(option);
                 } -->
             <!-- var values = ["ด้านพุทธิพิสัย", "จำ ", "เข้าใจ ", "ประยุกต์ใช้ ", "วิเคราะห์ ", "ประเมินค่า ", "สร้างสรรค์ "]; -->
-            {% if question.typequestion == 'เข้าใจ' %}
-            <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
-                <option value="จำ">จำ</option>
-                <option value="เข้าใจ" selected>เข้าใจ</option>
-                <option value="วิเคราะห์">วิเคราะห์</option>
-                <option value="ประเมินค่า">ประเมินค่า</option>
-                <option value="สร้างสรรค์">สร้างสรรค์</option>
-            </select>
-            {% elif question.typequestion == 'จำ' %}
-            <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
 
-                <option value="จำ" selected>จำ</option>
-                <option value="เข้าใจ">เข้าใจ</option>
-                <option value="วิเคราะห์">วิเคราะห์</option>
-                <option value="ประเมินค่า">ประเมินค่า</option>
-                <option value="สร้างสรรค์">สร้างสรรค์</option>
-            </select>
-            {% elif question.typequestion == 'วิเคราะห์' %}
-            <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
 
-                <option value="จำ">จำ</option>
-                <option value="เข้าใจ">เข้าใจ</option>
-                <option value="วิเคราะห์" selected>วิเคราะห์</option>
-                <option value="ประเมินค่า">ประเมินค่า</option>
-                <option value="สร้างสรรค์">สร้างสรรค์</option>
-            </select>
-            {% elif question.typequestion == 'ประเมินค่า' %}
-            <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
+            <div class="row">
+                <div class="col-8">
+                    <label for="q_{{forloop.counter}}">{{forloop.counter}}.</label>
+                    <input type="text" name="q_{{forloop.counter}}" id="q_{{forloop.counter}}"
+                        class="quiz-form__question" required value='{{question.question}}'>
+                </div>
+                <div class="col-4">
 
-                <option value="จำ">จำ</option>
-                <option value="เข้าใจ">เข้าใจ</option>
-                <option value="วิเคราะห์">วิเคราะห์</option>
-                <option value="ประเมินค่า" selected>ประเมินค่า</option>
-                <option value="สร้างสรรค์">สร้างสรรค์</option>
-            </select>
-            {% elif question.typequestion == 'สร้างสรรค์' %}
-            <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
+                    {% if question.typequestion == 'เข้าใจ' %}
+                    <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
+                        <option value="จำ">จำ</option>
+                        <option value="เข้าใจ" selected>เข้าใจ</option>
+                        <option value="วิเคราะห์">วิเคราะห์</option>
+                        <option value="ประเมินค่า">ประเมินค่า</option>
+                        <option value="สร้างสรรค์">สร้างสรรค์</option>
+                        <option value="ประยุกต์ใช้">ประยุกต์ใช้</option>
+                    </select>
+                    {% elif question.typequestion == 'จำ' %}
+                    <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
 
-                <option value="จำ">จำ</option>
-                <option value="เข้าใจ">เข้าใจ</option>
-                <option value="วิเคราะห์">วิเคราะห์</option>
-                <option value="ประเมินค่า">ประเมินค่า</option>
-                <option value="สร้างสรรค์" selected>สร้างสรรค์</option>
-            </select>
+                        <option value="จำ" selected>จำ</option>
+                        <option value="เข้าใจ">เข้าใจ</option>
+                        <option value="วิเคราะห์">วิเคราะห์</option>
+                        <option value="ประเมินค่า">ประเมินค่า</option>
+                        <option value="สร้างสรรค์">สร้างสรรค์</option>
+                        <option value="ประยุกต์ใช้">ประยุกต์ใช้</option>
+                    </select>
+                    {% elif question.typequestion == 'วิเคราะห์' %}
+                    <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
 
-            {% endif %}
+                        <option value="จำ">จำ</option>
+                        <option value="เข้าใจ">เข้าใจ</option>
+                        <option value="วิเคราะห์" selected>วิเคราะห์</option>
+                        <option value="ประเมินค่า">ประเมินค่า</option>
+                        <option value="สร้างสรรค์">สร้างสรรค์</option>
+                        <option value="ประยุกต์ใช้">ประยุกต์ใช้</option>
+                    </select>
+                    {% elif question.typequestion == 'ประเมินค่า' %}
+                    <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
+
+                        <option value="จำ">จำ</option>
+                        <option value="เข้าใจ">เข้าใจ</option>
+                        <option value="วิเคราะห์">วิเคราะห์</option>
+                        <option value="ประเมินค่า" selected>ประเมินค่า</option>
+                        <option value="สร้างสรรค์">สร้างสรรค์</option>
+                        <option value="ประยุกต์ใช้">ประยุกต์ใช้</option>
+                    </select>
+                    {% elif question.typequestion == 'สร้างสรรค์' %}
+                    <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
+
+                        <option value="จำ">จำ</option>
+                        <option value="เข้าใจ">เข้าใจ</option>
+                        <option value="วิเคราะห์">วิเคราะห์</option>
+                        <option value="ประเมินค่า">ประเมินค่า</option>
+                        <option value="สร้างสรรค์" selected>สร้างสรรค์</option>
+                        <option value="ประยุกต์ใช้">สร้างสรรค์</option>
+                        <option value="ประยุกต์ใช้">ประยุกต์ใช้</option>
+                    </select>
+
+                    {% elif question.typequestion == 'ประยุกต์ใช้' %}
+                    <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
+
+                        <option value="จำ">จำ</option>
+                        <option value="เข้าใจ">เข้าใจ</option>
+                        <option value="วิเคราะห์">วิเคราะห์</option>
+                        <option value="ประเมินค่า">ประเมินค่า</option>
+                        <option value="สร้างสรรค์">สร้างสรรค์</option>
+                        <option value="ประยุกต์ใช้" selected>ประยุกต์ใช้</option>
+                    </select>
+
+                    {% endif %}
+                </div>
+            </div>
+
             <!-- <select id="qt_{{forloop.counter}}" name="qt_{{forloop.counter}}">
                 <option value="ด้านพุทธิพิสัย">ด้านพุทธิพิสัย</option>
                 <option value="จำ">จำ</option>
